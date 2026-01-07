@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>VocalVibe - PROFILE</title>
+        <link href="stylesvibes.css" rel="stylesheet">
+    </html>
+    <body>
+        <div class="banner">
+            <div class="logo">
+
+            </div>
+            <div class="search">
+                
+            </div>
+            <div class="account">
+                
+            </div>
+        </div>
+        <div class="mainbody">
+            <h2>Profile</h2>
+            <div id="profileInfo">
+                <p><strong>Username: </strong><span id="profileName"></span></p>
+                <p><strong>Account Created: </strong><span id="profileCreated"></span></p>
+            </div>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </body>
+    <footer>
+
+    </footer>
+    <script>
+        const username = localStorage.getItem("username");
+        const createdAt = localStorage.getItem("createdAt");
+        
+        if (!username) {
+            window.location.href = "login.html";
+        } else {
+            document.getElementById("profileName").textContent = username;
+            document.getElementById("profileCreated").textContent = createdAt;
+        }
+
+        function logout() {
+            localStorage.removeItem("username");
+            localStorage.removeItem("createdAt");
+            localStorage.removeItem("profileColour")
+            window.location.href = "index.html";
+        }
+    </script>
+</html>

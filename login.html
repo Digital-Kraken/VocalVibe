@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>VocalVibe - LOG IN</title>
+        <link href="stylesvibes.css" rel="stylesheet">
+    </html>
+    <body>
+        <div class="banner">
+            <div class="logo">
+
+            </div>
+            <div class="search">
+                
+            </div>
+            <div class="account">
+                
+            </div>
+        </div>
+        <div class="mainbody">
+            <h2>Log In</h2>
+            <input type="text" placeholder="Enter Username" id="usernameInput">
+            <button onclick="login()">Login</button>
+        </div>
+    </body>
+    <footer>
+
+    </footer>
+    <script>
+        function generatePastelColour() {
+            const hue = Math.floor(Math.random() * 360)
+            return `hsl(${hue}, 70%, 80%)`;
+        }
+
+        function login() {
+            const username = document.getElementById("usernameInput").value;
+
+            if (username.trim() !== "") {
+                localStorage.setItem("username", username);
+
+                if (!localStorage.getItem("createdAt")) {
+                    localStorage.setItem("createdAt", new Date().toLocaleDateString());
+                }
+
+                if (!localStorage.getItem("profileColour")) {
+                    localStorage.setItem("profileColour", generatePastelColour())
+                }
+
+                window.location.href = "index.html";
+            }
+        }
+
+    </script>
+</html>

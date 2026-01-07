@@ -1,0 +1,919 @@
+<html>
+    <head>
+        <title>VocalVibe - HOME</title>
+        <link href="stylesvibes.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="banner">
+            <div class="banner-left">
+                <div class="logo"></div>
+            </div>
+
+            <div class="banner-center">
+                <div id="homeButton">
+                    <img src="images/home.png" alt="Home">
+                </div>
+                <input class="searchbar" type="text" placeholder="Search..">
+            </div>
+
+            <div class="banner-right">
+                <div class="account">
+                    <div id="accountArea"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="mainbody">
+            <div class="playlists">
+                <div class="playlistsbanner">
+                    <div class="playliststop">
+                        <h2>Your Library</h2>
+                        <button id="createPlaylistBtn">Create</button>
+                    </div>
+                </div>
+
+
+                <div id="playlistList"></div>
+
+
+            </div>
+
+
+            <div id="playlistView" class="hidden">
+                <div class="playlistHeader">
+                    <img id="playlistCover" class="playlistHeaderCover" src="images/defaultcover.png">
+
+                    <div class="playlistHeaderInfo">
+                        <h1 id="playlistName"></h1>
+                        <p id="playlistDescription"></p>
+                        <p id="playlistCreatorLine"></p>
+
+                    </div>
+                </div>
+
+                <div id="playlistSong"></div>
+            </div>
+
+            
+            <div class="maincontent" id="mainContent">
+                <div class="maincontentbanner"></div>
+                <div class="maincontentgradient">
+                    <div class="recentgrid">
+                        <div class="recentgridbits">
+                            <img class="recent" src="images/image.jpg" alt="coverpreview">
+                            <div class="recentgridbitstext">
+                                <p>TAKEDOWN</p>
+                            </div>
+                        </div>
+                        <div class="recentgridbits">
+                            <img class="recent" src="images/image2.png" alt="coverpreview">
+                            <div class="recentgridbitstext">
+                                <p>Payphone (Nightcore)</p>
+                            </div>
+                        </div>
+                        <div class="recentgridbits">
+                            <img class="recent" src="images/image3.png" alt="coverpreview">
+                            <div class="recentgridbitstext">
+                                <p>Past Lives</p>
+                            </div>
+                        
+                        </div>
+                        <div class="recentgridbits">
+                            <img class="recent" src="images/image4.png" alt="coverpreview" style="max-width: 36.72px;">
+                            <div class="recentgridbitstext">
+                                <p>How to Be a Heartbreaker</p>
+                            </div>
+                            
+                        </div>
+                        <div class="recentgridbits">
+                            <img class="recent" src="images/image5.png" alt="coverpreview">
+                            <div class="recentgridbitstext">
+                                <p>cool guitar riff I just made</p>
+                            </div>
+                            
+                        </div>
+                        <div class="recentgridbits">
+                            <img class="recent" src="images/image6.png" alt="coverpreview">
+                            <div class="recentgridbitstext">
+                                <p>BLOOD//WATER</p>
+                            </div>
+                                
+                        </div>
+                        <div class="recentgridbits">
+                            <img class="recent" src="images/image7.png" alt="coverpreview">
+                            <div class="recentgridbitstext">
+                                <p>TICKING</p>
+                            </div>
+                                
+                        </div>
+                        <div class="recentgridbits">
+                            <img class="recent" src="images/image8.png" alt="coverpreview">
+                            <div class="recentgridbitstext">
+                                <p>Everything Black</p>
+                            </div>
+                                
+                        </div>
+                    </div>
+                </div>
+                <div class="madefordiv">
+                    <h6>Made For</h6>
+                    <p>You</p>
+                </div>
+            <div class="scroll-section">
+                <button class="leftbutton" onclick="scrollcontainerLeft()">L</button>
+                <div class="madeforsongscontainer" id="madeforsongscontainer">
+                    
+                    <div class="madeforsongs">
+                        <img src="images/image.jpg" alt="coverpreview">
+                        <button class="playbutton" aria-label="Play" onclick="playSong('music/IRIS OUT - Kenshi Yonezu.mp3', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="black">
+                                <polygon points="6,4 20,12 6, 20"></polygon>
+                           </svg>
+                        </button>
+                        <h3>IRIS OUT</h3>
+                        <p>Kenshi Yonezu</p>
+                    </div>
+                    <div class="madeforsongs">
+                        <img src="images/image2.png" alt="coverpreview">
+                        <button class="playbutton" aria-label="Play" onclick="playSong('music/Payphone Nightcore - Syrex.mp3', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="black">
+                                <polygon points="6,4 20,12 6, 20"></polygon>
+                           </svg>
+                        </button>
+                        <h3>Payphone (Nightcore)</h3>
+                        <p>Syrex</p>
+                    </div>
+                    <div class="madeforsongs">
+                        <img src="images/image3.png" alt="coverpreview">
+                        <button class="playbutton" aria-label="Play" onclick="playSong('music/Past Lives - Martin Arteta.mp3', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="black">
+                                <polygon points="6,4 20,12 6, 20"></polygon>
+                           </svg>
+                        </button>
+                        <h3>Past Lives</h3>
+                        <p>Martin Aresta,creamy</p>
+                    </div>
+                    <div class="madeforsongs">
+                        <img src="images/image4.png" alt="coverpreview">
+                        <button class="playbutton" aria-label="Play" onclick="playSong('music/How to Be a Heartbreaker - Nightcore Reality.mp3', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="black">
+                                <polygon points="6,4 20,12 6, 20"></polygon>
+                           </svg>
+                        </button>
+                        <h3>How to Be a Heartbreaker</h3>
+                        <p>Nightcore Reality</p>
+                    </div>
+                    <div class="madeforsongs">
+                        <img src="images/image5.png" alt="coverpreview">
+                        <button class="playbutton" aria-label="Play" onclick="playSong('music/cool guitar riff i just made scro guitar - ssccrroo.mp3', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="black">
+                                <polygon points="6,4 20,12 6, 20"></polygon>
+                           </svg>
+                        </button>
+                        <h3>cool guitar riff i just made(scro guitar)</h3>
+                        <p>ssccrroo</p>
+                    </div>
+                    <div class="madeforsongs">
+                        <img src="images/image6.png" alt="coverpreview">
+                        <button class="playbutton" aria-label="Play" onclick="playSong('music/Blood __ Water - grandson.mp3', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="black">
+                                <polygon points="6,4 20,12 6, 20"></polygon>
+                           </svg>
+                        </button>
+                        <h3>Blood // Water</h3>
+                        <p>grandson</p>
+                    </div>
+                    <div class="madeforsongs">
+                        <img src="images/image7.png" alt="coverpreview">
+                        <button class="playbutton" aria-label="Play" onclick="playSong('music/Ticking - TIN.mp3', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="black">
+                                <polygon points="6,4 20,12 6, 20"></polygon>
+                           </svg>
+                        </button>
+                        <h3>Ticking</h3>
+                        <p>TIN</p>
+                    </div>
+                    <div class="madeforsongs">
+                        <img src="images/image8.png" alt="coverpreview">
+                        <button class="playbutton" aria-label="Play" onclick="playSong('music/Everything Black - Unlike Pluto.mp3', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="black">
+                                <polygon points="6,4 20,12 6, 20"></polygon>
+                           </svg>
+                        </button>
+                        <h3>Everything Black</h3>
+                        <p>Unlike Pluto</p>
+                    </div>
+                    
+                </div>
+                <button class="rightbutton" onclick="scrollcontainerRight()">R</button>
+                <div class="scrollblurR"></div>
+                <div class="scrollblurL"></div>
+            </div>
+
+
+
+                <div class="madefordiv">
+                    <p>Jump back in</p>
+                </div>
+            <div class="scroll-section">
+                <button class="leftbutton" onclick="scrollcontainerLeftJ()">L</button>
+                <div class="jumpbackinsongscontainer" id="jumpbackinsongscontainer">
+                    <div class="jumpbackinsongs">
+                        <img src="images/image9.png" alt="coverpreview">
+                        <button class="playbutton" aria-label="Play" onclick="playSong('music/Abnormality Dancin Girl - MICCHI.mp3', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="black">
+                                <polygon points="6,4 20,12 6, 20"></polygon>
+                           </svg>
+                        </button>
+                        <h3>Abnormality Dancin' Girl</h3>
+                        <p>MICCHI,Drazically</p>
+                    </div>
+                    <div class="jumpbackinsongs">
+                        <img src="images/image10.png" alt="coverpreview">
+                        <button class="playbutton" aria-label="Play" onclick="playSong('music/Creatures in Heaven - Glass Animals.mp3', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="black">
+                                <polygon points="6,4 20,12 6, 20"></polygon>
+                           </svg>
+                        </button>
+                        <h3>Creatures in Heaven</h3>
+                        <p>Glass Animals</p>
+                    </div>
+                    <div class="jumpbackinsongs">
+                        <img src="images/image11.png" alt="coverpreview">
+                        <button class="playbutton" aria-label="Play" onclick="playSong('music/My R - Lollia.mp3', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="black">
+                                <polygon points="6,4 20,12 6, 20"></polygon>
+                           </svg>
+                        </button>
+                        <h3>My R</h3>
+                        <p>Lollia</p>
+                    </div>
+                    <div class="jumpbackinsongs">
+                        <img src="images/image12.png" alt="coverpreview">
+                        <button class="playbutton" aria-label="Play" onclick="playSong('music/Peekaboom - Nightcore - RubyChans Nightcore.mp3', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="black">
+                                <polygon points="6,4 20,12 6, 20"></polygon>
+                           </svg>
+                        </button>
+                        <h3>Peekaboom - Nightcore</h3>
+                        <p>RubyChan's Nightcore</p>
+                    </div>
+                    <div class="jumpbackinsongs">
+                        <img src="images/image13.png" alt="coverpreview">
+                        <button class="playbutton" aria-label="Play" onclick="playSong('music/Panic Room - Nightcore - Au_Ra.mp3', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="black">
+                                <polygon points="6,4 20,12 6, 20"></polygon>
+                           </svg>
+                        </button>
+                        <h3>Panic Room - Nightcore</h3>
+                        <p>Au/Ra</p>
+                    </div>
+                    <div class="jumpbackinsongs">
+                        <img src="images/image14.png" alt="coverpreview">
+                        <button class="playbutton" aria-label="Play" onclick="playSong('music/Young Girl A - marchie.mp3', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="black">
+                                <polygon points="6,4 20,12 6, 20"></polygon>
+                           </svg>
+                        </button>
+                        <h3>Young Girl A</h3>
+                        <p>marchie</p>
+                    </div>
+                    <div class="jumpbackinsongs">
+                        <img src="images/image15.png" alt="coverpreview">
+                        <button class="playbutton" aria-label="Play" onclick="playSong('music/BIRDBRAIN - Jamie Paige.mp3', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="black">
+                                <polygon points="6,4 20,12 6, 20"></polygon>
+                           </svg>
+                        </button>
+                        <h3>BIRDBRAIN</h3>
+                        <p>Jamie Paige,OK Glass</p>
+                    </div>
+                    <div class="jumpbackinsongs">
+                        <img src="images/image16.jpg" alt="coverpreview">
+                        <button class="playbutton" aria-label="Play" onclick="playSong('music/Party Pioneers - Rudeejay.mp3', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="black">
+                                <polygon points="6,4 20,12 6, 20"></polygon>
+                           </svg>
+                        </button>
+                        <h3>Party Pioneers</h3>
+                        <p>Rudeejay,NOYSE</p>
+                    </div>
+                </div>
+                <button class="rightbutton" onclick="scrollcontainerRightJ()">R</button>
+                <div class="scrollblurR"></div>
+                <div class="scrollblurL"></div>
+            </div>
+        </div>
+
+        <div class="player">
+            <div id="fullPlayer" class="hidden">
+                <div class="playerTopSection">
+                    <img id="fullPlayerCover" class="playerCoverLarge">
+
+                    <div class="playerTextBlock">
+
+                        <div class="titleRow">
+                            <div id="playerTitleWrapper" class="playerTitleWrapper">
+                                <div id="fullPlayerTitle" class="playerTitle"></div>
+                            </div>
+
+                            <button id="playerAddButton" class="playerAddButton">+</button>
+                        </div>
+
+                        <div id="fullPlayerArtist" class="playerArtist"></div>
+                    </div>
+
+                </div>
+
+                <div class="playerCreditsSection">
+                    <h3 class="creditsHeader">Credits</h3>
+                    <div id="creditsList"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="bottomPlayer" class="inactive">
+
+            <div class="bpLeft">
+                <img id="playerCover" src="" alt="">
+                <div>
+                    <div id="playerTitle">Nothing Playing...</div>
+                    <div id="playerArtist"></div>
+                </div>
+
+                <button id="bpAddToPlaylist" class="bpAddBtn" onclick="openAddToPlaylistFromPlayer()">+</button>
+            </div>
+
+            <div class="bpCenter">
+                <button id="bpPlayPause">1</button>
+
+                <div class="bpProgress">
+                    <span id="bpCurrentTime">0:00</span>
+                    <input type="range" id="bpProgressBar" value="0" min="0" max="100">
+                    <span id="bpDuration">0:00</span>
+                </div>
+            </div>
+
+            <div class="bpRight">
+                <input type="range" id="bpVolume" min="0" max="1" step="0.01">
+            </div>
+        </div>
+
+        <div id="addToPlaylistModal" class="hidden addPlaylistModal">
+            <div class="addPlaylistContent">
+                <h2>Add to Playlist</h2>
+                <div id="playlistChoices"></div>
+
+                <button id="savePlaylistSelection" class="hidden" onclick="savePlaylistSelection()">Save</button>
+                <button onclick="closeAddToPlaylistModal()">Cancel</button>
+            </div>
+        </div>
+
+        <div id="createPlaylistModal" class="hidden">
+            <div class="modalContent">
+                <h2>Create Playlist</h2>
+                <input id="playlistNameInput" placeholder="Playlist name">
+                <textarea id="playlistDescInput" placeholder="Add an optional Description"></textarea>
+                <button id="savePlaylistBtn">Save</button>
+            </div>
+        </div>
+    
+
+
+
+
+
+        <script>
+
+            let homepageHTML = "";
+
+            window.addEventListener("DOMContentLoaded", () => {
+                const main = document.getElementById("mainContent");
+                if (main) {
+                    homepageHTML = main.innerHTML;
+
+                    setupScrollButtons();
+                }
+            });
+
+            document.getElementById("homeButton").onclick = () => {
+
+                document.getElementById("playlistView").classList.add("hidden");
+
+                const main = document.getElementById("mainContent");
+                if (main) {
+                    main.classList.remove("hidden");
+                    main.innerHTML = homepageHTML;
+
+                    setupScrollButtons();
+                }
+            };
+
+            let playlists = JSON.parse(localStorage.getItem("playlists")) || [];
+
+            function renderPlaylists() {
+                const container = document.getElementById("playlistList");
+
+                container.innerHTML = playlists.map(pl => `
+                    <div class="playlistItem" onclick="openPlaylist('${pl.id}')">
+                        <img src="${pl.cover || 'images/defaultcover.png'}">
+                        <div class="playlistMeta">
+                            <div class="playlistName">${pl.name}</div>
+                            <div class="playlistCreator">${pl.creator}</div>
+                        </div>
+                    </div>
+                `).join("");
+            }
+
+            renderPlaylists();
+
+            document.getElementById("createPlaylistBtn").onclick = () => {
+                document.getElementById("createPlaylistModal").classList.remove("hidden");
+            };
+
+            document.getElementById("savePlaylistBtn").onclick = () => {
+                const name = document.getElementById("playlistNameInput").value;
+                const desc = document.getElementById("playlistDescInput").value;
+
+                if (!name.trim()) return;
+
+                const username = localStorage.getItem("username");
+
+                const newPlaylist = {
+                    id: "pl_" + Date.now(),
+                    name,
+                    description: desc,
+                    songs: [],
+                    cover: null,
+                    creator: username || "VocalVibe"
+                };
+
+                playlists.push(newPlaylist);
+                localStorage.setItem("playlists", JSON.stringify(playlists));
+
+                renderPlaylists();
+
+                document.getElementById("createPlaylistModal").classList.add("hidden");
+            };
+
+            function openPlaylist(playlistId) {
+                const pl = playlists.find(p => p.id === playlistId);
+                if (!pl) return;
+
+                document.getElementById("mainContent").classList.add("hidden")
+
+                document.getElementById("playlistView").classList.remove("hidden");
+                document.getElementById("playlistView").dataset.id = playlistId;
+
+                document.getElementById("playlistCover").src = pl.cover || "images/defaultcover.png";
+                document.getElementById("playlistName").textContent = pl.name;
+                document.getElementById("playlistDescription").textContent = pl.description || "";
+                document.getElementById("playlistCreatorLine").textContent =
+                    `${pl.creator} • ${pl.songs.length} songs`;
+
+                let songsHTML = pl.songs.map(song => `
+                    <div class="playlistSong">
+                        <img src="${song.cover}">
+                        <div class="playlistSongInfo">
+                            <h3>${song.title}</h3>
+                            <p>${song.artist}</p>
+                        </div>
+                        <button onclick="playSong('${song.src}', this)">Play</button>
+                    </div>
+                `).join("");
+
+                document.getElementById("playlistSong").innerHTML = songsHTML;
+
+                if (!pl.cover && pl.songs.length > 0) {
+                    pl.cover = pl.songs[0].cover;
+                    localStorage.setItem("playlists", JSON.stringify(playlists));
+                    document.getElementById("playlistCover").src = pl.cover;
+                }
+            }
+
+
+            function setupScrollButtons() {
+                const madeforsongscontainer = document.getElementById("madeforsongscontainer");
+                const jumpbackinsongscontainer = document.getElementById("jumpbackinsongscontainer");
+
+                window.scrollcontainerLeft = () => {
+                    madeforsongscontainer.scrollBy({ left: -500, behavior: "smooth" });
+                };
+
+                window.scrollcontainerRight = () => {
+                    madeforsongscontainer.scrollBy({ left: 500, behavior: "smooth" });
+                };
+
+                window.scrollcontainerLeftJ = () => {
+                    jumpbackinsongscontainer.scrollBy({ left: -500, behavior: "smooth" });
+                };
+
+                window.scrollcontainerRightJ = () => {
+                    jumpbackinsongscontainer.scrollBy({ left: 500, behavior: "smooth" });
+                };
+            }
+
+            const parent = document.querySelector('.maincontent');
+
+            document
+                .querySelectorAll('.madeforsongscontainer, .jumpbackinsongscontainer')
+                    .forEach(scroller => {
+                        scroller.addEventListener('wheel', (e) => {
+                        if (e.deltaY !== 0) {
+                            
+                            parent.scrollBy({ top: e.deltaY, behavior: "smooth" });
+
+                            e.preventDefault();
+                        }
+                    }, { passive: false });
+                });
+
+            const accountArea = document.getElementById("accountArea")
+            const username = localStorage.getItem("username")
+
+            if (username) {
+                const firstLetter = username.charAt(0).toUpperCase();
+                const profileColour = localStorage.getItem("profileColour");
+
+                accountArea.innerHTML = `
+                    <a href="profile.html" class="profile-icon" style="background-color: ${profileColour};">
+                        ${firstLetter}
+                    </a>
+                `;
+            } else {
+                accountArea.innerHTML = `
+                    <a href="login.html" class="loginbutton">Login</a>
+                `;
+            }
+
+            function generatePastelColour() {
+                const hue = Math.floor(Math.random() * 360)
+                return `hsl(${hue}, 70%, 80%)`;
+            }
+
+            const playIcon = `
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="black">
+                <polygon points="6,4 20,12 6, 20"></polygon>
+            </svg>`;
+
+            const pauseIcon = `
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="black">
+                <rect x="4" y="4" width="5.5" height="22"></rect>
+                <rect x="14" y="4" width="5.5" height="22"></rect>
+            </svg>`;
+
+            let currentAudio = null;
+            let currentButton = null;
+
+            const bpPlayPause = document.getElementById("bpPlayPause");
+            bpPlayPause.innerHTML = playIcon;
+            const bpProgressBar = document.getElementById("bpProgressBar");
+            const bpVolume = document.getElementById("bpVolume");
+            bpVolume.style.setProperty("--value", (Number(bpVolume.value) *100) + "%")
+
+            const artistRoles = {
+                "MICCHI": "Main Artist, Composer",
+                "Drazically": "Featured Artist",
+                "ssccrroo": "Main Artist",
+                "RubyChan's Nightcore": "Main Artist",
+                "TIN": "Main Artist",
+                "Unlike Pluto": "Main Artist",
+                "Kenshi Yonezu": "Main Artist, Composer, Lyricist, Arranger, Producer",
+                "Syrex": "Main Artist",
+                "Martin Aresta": "Main Artist",
+                "creamy": "Main Artist",
+                "Nightcore Reality": "Main Artist",
+                "grandson": "Main Artist",
+                "Glass Animals": "Main Artist",
+                "Lollia": "Main Artist",
+                "Au/Ra": "Main Artist",
+                "marchie": "Main Artist, Composer",
+                "Jamie Paige": "Main Artist, Producer",
+                "OK Glass": "Featured Artist",
+                "Rudeejay": "Main Artist, Producer",
+                "NOYSE": "Main Artist"
+            }
+
+            let marqueeFrame = null;
+
+            function enableMarqueeIfNeeded() {
+                const title = document.getElementById("fullPlayerTitle");
+                const wrapper = document.getElementById("playerTitleWrapper");
+
+                if (!title || !wrapper) return;
+
+                cancelAnimationFrame(marqueeFrame);
+
+                title.style.transform = "translateX(0px)";
+
+                const overflow = title.scrollWidth - wrapper.clientWidth;
+
+                if (overflow <= 0) return;
+
+                const speed = 20;
+                const pause = 800;
+                const duration = (overflow / speed) * 1000;
+
+                let direction = 1;
+                let startTime = null;
+
+                function animate(timestamp) {
+                    if (!startTime) startTime = timestamp;
+
+                    const elapsed = timestamp - startTime;
+
+                    if (elapsed < pause) {
+                        title.style.transform = "translateX(0px)";
+                    } 
+                    else if (elapsed < pause + duration) {
+                        const progress = (elapsed - pause) / duration;
+                        const x = -overflow * progress;
+                        title.style.transform = `translateX(${x}px)`;
+                    } 
+                    else if (elapsed < pause + duration + pause) {
+                        title.style.transform = `translateX(${-overflow}px)`;
+                    } 
+                    else {
+                        direction = -direction;
+                        startTime = timestamp;
+
+                        if (direction === -1) {
+                            marqueeFrame = requestAnimationFrame(animateBack);
+                            return;
+                        } else {
+                            marqueeFrame = requestAnimationFrame(animate);
+                            return;
+                        }
+                    }
+
+                    marqueeFrame = requestAnimationFrame(animate);
+                }
+
+                function animateBack(timestamp) {
+                    if (!startTime) startTime = timestamp;
+
+                    const elapsed = timestamp - startTime;
+
+                    if (elapsed < duration) {
+                        const progress = elapsed / duration;
+                        const x = -overflow + overflow * progress;
+                        title.style.transform = `translateX(${x}px)`;
+                    } 
+                    else {
+                        startTime = timestamp;
+                        marqueeFrame = requestAnimationFrame(animate);
+                        return;
+                    }
+
+                    marqueeFrame = requestAnimationFrame(animateBack);
+                }
+
+                // Start the forward scroll
+                marqueeFrame = requestAnimationFrame(animate);
+            }
+
+            document.getElementById("playerAddButton").onclick = openAddToPlaylistFromPlayer;
+
+            function updateCredits(song) {
+                const creditsContainer = document.getElementById("creditsList");
+                creditsContainer.innerHTML = "";
+
+                const artists = song.artist.split(",");
+
+                artists.forEach(name => {
+                    const role = artistRoles[name] || "Artist";
+
+                    creditsContainer.innerHTML += `
+                        <div class="creditItem">
+                            <div class="creditName">${name}</div>
+                            <div class="creditRole">${role}</div>
+                        </div>
+                    `;
+                });
+            }
+
+            function updateFullPlayer(song) {
+                document.getElementById("fullPlayerCover").src = song.cover;
+                document.getElementById("fullPlayerTitle").innerText = song.title;
+                document.getElementById("fullPlayerArtist").innerText = song.artist;
+
+                enableMarqueeIfNeeded();
+                updateCredits(song);
+            }
+
+            function playSong(src, button) {
+
+                const card = button.parentElement;
+                const cover = card.querySelector("img").src;
+                const title = card.querySelector("h3").textContent;
+                const artist = card.querySelector("p").textContent;
+
+                const song = {cover, title, artist, src};
+
+                updateBottomPlayer(cover, title, artist);
+
+                updateFullPlayer(song);
+                document.getElementById("fullPlayer").classList.remove("hidden");
+
+                localStorage.setItem("lastSong", JSON.stringify(song));
+
+                document.getElementById("bottomPlayer").classList.remove("inactive");
+
+                localStorage.setItem("lastSong", JSON.stringify({ cover, title, artist, src }));
+
+                if (currentAudio && currentButton === button) {
+                    if (currentAudio.paused) {
+                        currentAudio.play();
+                        button.innerHTML = pauseIcon;
+                        bpPlayPause.innerHTML = pauseIcon;
+                    } else {
+                        currentAudio.pause();
+                        button.innerHTML = playIcon;
+                        bpPlayPause.innerHTML = playIcon;
+                    }
+                    return;
+
+                }
+
+                if (currentAudio) {
+                    currentAudio.pause();
+                    currentAudio.currentTime = 0;
+                    currentButton.innerHTML = playIcon;
+                    currentAudio = null;
+                    currentButton = null;
+                }
+            
+                currentAudio = new Audio(src);
+                currentAudio.volume = Number(bpVolume.value);
+                currentButton = button;
+
+                bpProgressBar.value = 0;
+                bpProgressBar.style.setProperty("--value", "0%");
+
+                setupAudioEvents();
+                currentAudio.play();
+
+                button.innerHTML = pauseIcon;
+                bpPlayPause.innerHTML = pauseIcon;
+
+            }
+
+            let selectedPlaylists = new Set();
+
+            function renderPlaylistChoices() {
+                const song = JSON.parse(localStorage.getItem("lastSong"));
+                const container = document.getElementById("playlistChoices");
+
+                container.innerHTML = playlists.map(pl => {
+                    const alreadyIn = pl.songs.some(s => s.src === song.src);
+                    const selected = selectedPlaylists.has(pl.id);
+
+                    return `
+                        <div class="playlistChoices" onclick="togglePlaylistSelect('${pl.id}')">
+                            <img src="${pl.cover || 'images/defaultcover.png'}">
+                            <span>${pl.name}</span>
+                            ${alreadyIn ? '<span class="check">✔</span>' : ''}
+                            ${selected ? '<span class="selectedDot">●</span>' : ''}
+                        </div>
+                    `;
+                }).join("");
+                
+                document.getElementById("savePlaylistSelection").classList.remove("hidden")
+            }
+
+            function savePlaylistSelection() {
+                selectedPlaylists.forEach(id => {
+                    const pl = playlists.find(p => p.id === id);
+                    if (!pl) return;
+
+                    if (!pl.songs.some(s => s.src === songToAdd.src)) {
+                        pl.songs.push(songToAdd);
+
+                        if (!pl.cover) {
+                            pl.cover = songToAdd.cover;
+                        }
+                    }
+                });
+
+                localStorage.setItem("playlists", JSON.stringify(playlists));
+
+                selectedPlaylists.clear();
+                closeAddToPlaylistModal();
+
+                if (document.getElementById("playlistView")) {
+                    openPlaylist(document.getElementById("playlistView").dataset.id);
+                }
+            }
+
+            function togglePlaylistSelect(id) {
+                if (selectedPlaylists.has(id)) {
+                    selectedPlaylists.delete(id);
+                } else {
+                    selectedPlaylists.add(id);
+                }
+                renderPlaylistChoices();
+            }
+
+            let songToAdd = null;
+
+            function openAddToPlaylistFromPlayer() {
+                const song = JSON.parse(localStorage.getItem("lastSong"));
+                if (!song) return;
+
+                songToAdd = {
+                    id: "song_" + Date.now(),
+                    cover: song.cover,
+                    title: song.title,
+                    artist: song.artist,
+                    src: song.src
+                };
+
+                renderPlaylistChoices();
+                document.getElementById("addToPlaylistModal").classList.remove("hidden")
+            }
+
+            function closeAddToPlaylistModal() {
+                document.getElementById("addToPlaylistModal").classList.add("hidden")
+            }
+
+            function addSongToPlaylist(playlistId) {
+                const pl = playlists.find(p => p.id === playlistId);
+                if (!pl) return;
+
+                pl.songs.push(songToAdd);
+
+                if (!pl.cover || pl.cover === "") {
+                    pl.cover = songToAdd.cover;
+                }
+
+                renderPlaylists();
+
+                localStorage.setItem("playlists", JSON.stringify(playlists));
+
+                closeAddToPlaylistModal();
+
+                if (!document.getElementById("playlistView").classList.contains("hidden")) {
+                    openPlaylist(playlistId);
+                }
+            }
+
+            function setupAudioEvents() {
+
+
+                currentAudio.onloadedmetadata = () => {
+                    document.getElementById("bpDuration").textContent = formatTime(currentAudio.duration)
+                };
+
+                currentAudio.ontimeupdate = () => {
+                    const progress = (currentAudio.currentTime / currentAudio.duration) * 100;
+                    bpProgressBar.value = progress;
+                    bpProgressBar.style.setProperty("--value", progress + "%")
+                    document.getElementById("bpCurrentTime").textContent = formatTime(currentAudio.currentTime);
+                };
+
+                currentAudio.onended = () => {
+                    currentButton.innerHTML = playIcon;
+                    bpPlayPause.innerHTML = playIcon;
+                };
+            }
+
+            bpPlayPause.addEventListener("click", () => {
+                if (!currentAudio) return;
+
+                if (currentAudio.paused) {
+                    currentAudio.play();
+                    currentButton.innerHTML = pauseIcon;
+                    bpPlayPause.innerHTML = pauseIcon;
+                } else {
+                    currentAudio.pause();
+                    currentButton.innerHTML = playIcon;
+                    bpPlayPause.innerHTML = playIcon;
+                }
+            });
+
+            bpProgressBar.addEventListener("input", (e) => {
+                if (!currentAudio) return;
+                const seek = (e.target.value / 100) * currentAudio.duration;
+                currentAudio.currentTime = seek
+            });
+
+            bpVolume.addEventListener("input", () => {
+                const vol = Number(bpVolume.value)
+                if (currentAudio) currentAudio.volume = vol;
+                bpVolume.style.setProperty("--value", (vol * 100) + "%")
+            });
+
+            function updateBottomPlayer(cover, title, artist) {
+                document.getElementById("playerCover").src = cover;
+                document.getElementById("playerTitle").textContent = title;
+                document.getElementById("playerArtist").textContent = artist;
+            }
+
+            function formatTime(sec) {
+                const m = Math.floor(sec / 60);
+                const s = Math.floor( sec % 60).toString().padStart(2, "0");
+                return `${m}:${s}`;
+            }
+        </script>
+    </body>
+</html>
