@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>VocalVibe - LOG IN</title>
+        <link href="loginvibes.css" rel="stylesheet">
+    </html>
+    <body>
+        <div class="banner"></div>
+        <div class="mainbody">
+
+            <img src="images/VocalVibeLogo.png" class="logo" alt="VocalVibe Logo">
+
+            <h1 style="color: white;">Welcome back</h1>
+
+            <input type="text" placeholder="Enter your username" id="usernameInput">
+
+            <button class="login-btn" onclick="login()">Continue</button>
+        </div>
+    </body>
+
+    <script>
+        function generatePastelColour() {
+    const hue = Math.floor(Math.random() * 360);
+    return `hsl(${hue}, 70%, 80%)`;
+}
+
+function login() {
+    const username = document.getElementById("usernameInput").value.trim();
+
+    if (username !== "") {
+        localStorage.setItem("username", username);
+
+        // Save creation date only once (ISO format for consistency)
+        if (!localStorage.getItem("createdAt")) {
+            localStorage.setItem("createdAt", new Date().toLocaleDateString());
+        }
+
+        // Save profile colour only once
+        if (!localStorage.getItem("profileColour")) {
+            localStorage.setItem("profileColour", generatePastelColour());
+        }
+
+        // Optional: initialize lastPlayed
+        if (!localStorage.getItem("lastPlayed")) {
+            localStorage.setItem("lastPlayed", "null");
+        }
+
+        window.location.href = "index.html";
+    }
+}
+
+// Allow pressing Enter to log in
+document.getElementById("usernameInput").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") login();
+});
+
+    </script>
+</html>

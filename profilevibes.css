@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: spotifymix;
+    background: #111;
+    color: white;
+}
+
+.mainbody {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.profile-icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: grey;
+}
+
+.profile-text h2 {
+    margin: 0;
+    font-size: 28px;
+    font-family: spotifymix;
+}
+
+.profile-actions {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: spotifymix;
+}
+
+#changeColourBtn {
+    background: #444;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.badges-section, .last-played, .playlist-info {
+    margin-top: 40px;
+}
+
+.badges {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.badge {
+    padding: 8px 12px;
+    background: #222;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: spotifymix;
+}
+
+.song-card {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+@font-face {
+    font-family: "spotifymix";
+    src:url(SpotifyMix-Bold.woff);
+}
+
+.classname {
+    font-family: "spotifymix";
+}
+.logout-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.logout-section button {
+    background: #e74c3c;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}

@@ -1,0 +1,82 @@
+/* Reset and base styles */
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: spotifymix;
+    background: url('images/image2.png') center/cover no-repeat;
+    backdrop-filter: blur(12px);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -2;
+}
+
+/* Main login panel */
+.mainbody {
+    background-color: #121212;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    width: 300px;
+    text-align: center;
+}
+
+/* Heading */
+.mainbody h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #ffffff;
+    font-family: spotifymix;
+}
+
+.mainbody img {
+    height: 100px;
+    width: 100px;
+}
+
+/* Input field */
+#usernameInput {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    font-family: spotifymix;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #1ac653;
+    color: black;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: spotifymix;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #1ED760;
+}
+
+/* Optional: hide unused banner sections */
+.banner {
+    display: none;
+}
+
+@font-face {
+    font-family: "spotifymix";
+    src:url(SpotifyMix-Bold.woff);
+}
+
+.classname {
+    font-family: "spotifymix";
+}

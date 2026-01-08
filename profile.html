@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <title>VocalVibe - PROFILE</title>
+        <link href="profilevibes.css" rel="stylesheet">
+    </html>
+    <body>
+        <div class="banner">
+            <div class="logo">
+
+            </div>
+            <div class="search">
+                
+            </div>
+            <div class="account">
+                
+            </div>
+        </div>
+        <div class="mainbody">
+
+            <div class="profile-header">
+                <div class="profile-icon" id="profileIcon"></div>
+
+                <div class="profile-text">
+                    <h2 id="profileName"></h2>
+                    <p>Joined: <span id="profileCreated"></span></p>
+                </div>
+
+                <div class="profile-actions">
+                    <!--
+                    <h3 class="badges-section"></h3>
+                    <div class="badges" id="badgeContainer"></div>
+                    -->
+                </div>
+
+                <div class="last-played">
+                    <h3>Last Song Played</h3>
+                    <div class="song-card" id="lastPlayedCard"></div>
+                </div>
+            </div>
+
+            <div class="playlist-info">
+                <h3>Your Playlists</h3>
+                <p><strong>Total:</strong> <span id="playlistCount">0</span></p>
+            </div>
+
+            <div class="logout-section">
+                <button id="logoutBtn" onclick="logout()">Log out</button>
+            </div>
+
+    </body>
+
+    <script>
+        // --- Load basic profile info ---
+        const username = localStorage.getItem("username");
+        const createdAt = localStorage.getItem("createdAt");
+        const profileColour = localStorage.getItem("profileColour");
+
+        // Redirect if not logged in
+        if (!username) {
+            window.location.href = "login.html";
+        } else {
+            document.getElementById("profileName").textContent = username;
+            document.getElementById("profileCreated").textContent = createdAt;
+        }
+
+        // --- Profile Icon ---
+        const icon = document.getElementById("profileIcon");
+        if (icon && profileColour) {
+            icon.style.background = profileColour;
+        }
+
+        // --- Change Colour Button ---
+        const changeBtn = document.getElementById("changeColourBtn");
+        if (changeBtn) {
+            changeBtn.addEventListener("click", () => {
+                const newColour = generatePastelColour();
+                localStorage.setItem("profileColour", newColour);
+                icon.style.background = newColour;
+            });
+        }
+
+        function generatePastelColour() {
+            const hue = Math.floor(Math.random() * 360);
+            return `hsl(${hue}, 70%, 80%)`;
+        }
+
+        // --- Badges ---
+        const badgeContainer = document.getElementById("badgeContainer");
+
+        function loadBadges() {
+            const badges = [];
+
+            // Basic member badge
+            badges.push("🎉 Member");
+
+            // Colour badge
+            if (profileColour) {
+                badges.push("🌈 Custom Colour");
+            }
+
+            // Early adopter badge (example)
+            const createdDate = new Date(createdAt);
+            const launchDate = new Date("2025-01-01");
+            if (createdDate < launchDate) {
+                badges.push("⭐ Early Listener");
+            }
+
+            // Render badges
+            badgeContainer.innerHTML = badges
+                .map(b => `<div class="badge">${b}</div>`)
+                .join("");
+        }
+
+        loadBadges();
+
+        // --- Last Played Song ---
+        const lastPlayed = JSON.parse(localStorage.getItem("lastPlayed"));
+        const lastPlayedCard = document.getElementById("lastPlayedCard");
+
+        if (lastPlayed && lastPlayedCard) {
+            lastPlayedCard.innerHTML = `
+                <img src="${lastPlayed.cover}" width="60" height="60" style="border-radius:6px;">
+                <div>
+                    <p><strong>${lastPlayed.title}</strong></p>
+                    <p>${lastPlayed.artist}</p>
+                </div>
+            `;
+        } else if (lastPlayedCard) {
+            lastPlayedCard.innerHTML = `<p>No song played yet</p>`;
+        }
+
+        // --- Playlist Count (placeholder for now) ---
+        document.getElementById("playlistCount").textContent = 0;
+
+        // --- Logout ---
+        function logout() {
+            localStorage.removeItem("username");
+            localStorage.removeItem("createdAt");
+            localStorage.removeItem("profileColour");
+            localStorage.removeItem("lastPlayed");
+            window.location.href = "index.html";
+        }
+    </script>
+</html>
